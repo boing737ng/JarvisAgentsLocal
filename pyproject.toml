@@ -1,0 +1,12 @@
+[project]
+name = "jarvis"
+version = "0.1.0"
+description = "Local multi-agent AI system powered by Ollama"
+requires-python = ">=3.12"
+
+[project.scripts]
+jarvis = "jarvis.cli:app"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.backends.legacy:build"

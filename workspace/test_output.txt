@@ -1,0 +1,2 @@
+Hello from Jarvis!
+Line 2: Testing file operations.

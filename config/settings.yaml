@@ -1,0 +1,21 @@
+ollama_url: "http://localhost:11434"
+workspace_dir: "workspace"
+chroma_dir: "data/chroma"
+log_level: "INFO"
+
+docker:
+  sandbox_image: "jarvis-sandbox:latest"
+  sandbox_dockerfile: "docker/sandbox.Dockerfile"
+  mem_limit: "1g"
+  cpu_quota: 50000
+  timeout_seconds: 30
+  workspace_mount: "/work"
+
+memory:
+  max_results: 5
+  chunk_size: 512
+  embedding_model: "nomic-embed-text-v2-moe"
+  embedding_keep_alive: "5m"
+
+graph:
+  max_iterations: 10

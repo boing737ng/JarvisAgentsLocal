@@ -1,0 +1,43 @@
+orchestrator:
+  model: "llama3.1:8b"
+  keep_alive: "5m"
+  temperature: 0.3
+  prompt_file: "orchestrator.md"
+  tools: ["web_search", "recall", "remember"]
+
+tool_caller:
+  model: "llama3.1:8b"
+  keep_alive: "2m"
+  temperature: 0.1
+  prompt_file: "tool_caller.md"
+
+architect:
+  model: "deepseek-r1:14b"
+  keep_alive: "0"
+  temperature: 0.4
+  prompt_file: "architect.md"
+
+coder:
+  model: "qwen2.5-coder:7b"
+  keep_alive: "1m"
+  temperature: 0.2
+  prompt_file: "coder.md"
+  tools: ["docker_exec", "files"]
+
+grandmaster:
+  model: "qwen3.5:27b"
+  keep_alive: "0"
+  temperature: 0.5
+  prompt_file: "grandmaster.md"
+
+parser:
+  model: "qwen2.5:0.5b"
+  keep_alive: "2m"
+  temperature: 0.1
+  prompt_file: "parser.md"
+
+visionary:
+  model: "qwen3-vl:8b"
+  keep_alive: "0"
+  temperature: 0.3
+  prompt_file: "visionary.md"
